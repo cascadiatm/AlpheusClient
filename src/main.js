@@ -1,5 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { ApolloClient } from 'apollo-client'
+import { HttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import VueApollo from 'vue-apollo'
+
+const httpLink = new HttpLink({
+  // You should use an absolute URL here
+  uri: 'http://localhost:3020/graphql',
+})
+
+// Create the apollo client
+const apolloClient = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+  connectToDevTools: true,
+})
 
 // Plugins
 import GlobalComponents from './globalComponents'
@@ -23,6 +39,7 @@ Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
 Vue.use(Notifications)
 Vue.use(SideBar)
+Vue.use(VueApollo)
 
 // configure router
 const router = new VueRouter({

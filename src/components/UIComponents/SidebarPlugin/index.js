@@ -13,13 +13,12 @@ const SidebarStore = {
     {
       name: 'Oceanus',
       icon: 'ti-map-alt',
-      path: '/admin/oceanus'
+      path: '/events/oceanus'
     },
     {
       name: 'People',
       icon: 'ti-user',
-      path: '/admin/maps',
-      component: Maps
+      path: '/admin/maps'
     },
     {
       name: 'Organizations',
@@ -29,13 +28,12 @@ const SidebarStore = {
     {
       name: 'Events',
       icon: 'ti-calendar',
-      path: '/gdelt/admin'
+      path: '/events/overview'
     },
     {
       name: 'GDELT',
       icon: 'ti-server',
-      path: '/admin/gdelt',
-      component: GDELT
+      path: '/admin/gdelt'
     }
   ],
   displaySidebar (value) {

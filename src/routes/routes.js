@@ -15,9 +15,26 @@ const routes = [
     redirect: '/admin/overview'
   },
   {
+    path: '/events',
+    component: DashboardLayout,
+    redirect: '/events',
+	  children: [
+      {
+        path: 'overview',
+        name: 'overview',
+        component: Overview
+      },
+      {
+        path: 'oceanus',
+        name: 'oceanus',
+        component: Maps
+      }
+		]
+  },
+  {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/stats',
+    redirect: '/admin/overview',
     children: [
       {
         path: 'overview',

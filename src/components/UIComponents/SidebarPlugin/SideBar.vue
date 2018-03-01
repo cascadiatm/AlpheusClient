@@ -13,7 +13,7 @@
             <div class="logo-img">
                 <img src="static/img/alpheus-logo.png" alt="">
             </div>
-          ⍶lpheus
+          ⍺lpheus
         </a>
       </div>
       <slot>
